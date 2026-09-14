@@ -1,0 +1,80 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "material symbols outlined",
+        "createdAt": "2026-09-11T23:24:04.307Z",
+        "reason": "Approved comp (code.html) and its DESIGN.md tokens use Google's Material Symbols as the icon grammar; not a type drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "10px",
+        "createdAt": "2026-09-11T23:24:27.368Z",
+        "reason": "Icon and micro-chip sizes from the approved comp (code.html); not body-type ramp steps"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "11px",
+        "createdAt": "2026-09-11T23:24:27.421Z",
+        "reason": "Icon and micro-chip sizes from the approved comp (code.html); not body-type ramp steps"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "16px",
+        "createdAt": "2026-09-11T23:24:27.474Z",
+        "reason": "Icon and micro-chip sizes from the approved comp (code.html); not body-type ramp steps"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "20px",
+        "createdAt": "2026-09-11T23:24:46.653Z",
+        "reason": "Icon and micro-chip sizes from the approved comp (code.html); not body-type ramp steps"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "22px",
+        "createdAt": "2026-09-11T23:24:46.699Z",
+        "reason": "Icon and micro-chip sizes from the approved comp (code.html); not body-type ramp steps"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "24px",
+        "createdAt": "2026-09-11T23:24:46.739Z",
+        "reason": "Icon and micro-chip sizes from the approved comp (code.html); not body-type ramp steps"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "26px",
+        "createdAt": "2026-09-11T23:24:46.788Z",
+        "reason": "Icon and micro-chip sizes from the approved comp (code.html); not body-type ramp steps"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "6px",
+        "createdAt": "2026-09-12T03:40:12.222Z",
+        "reason": "Focus ring radius is intentional per DESIGN.md: 2px primary outline, 2px offset, 6px radius"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "13px",
+        "createdAt": "2026-09-12T03:40:58.049Z",
+        "reason": "In-mockup micro text for mobile menu demo, not main layout type. Sanctioned exception per DESIGN.md."
+      },
+      {
+        "rule": "overused-font",
+        "value": "plus jakarta sans",
+        "createdAt": "2026-09-14T10:40:27.762Z",
+        "reason": "Design system font, confirmed in DESIGN.md and surface brief"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-09-14T10:40:27.804Z",
+        "reason": "Design system font, confirmed in DESIGN.md and surface brief"
+      }
+    ]
+  }
+}

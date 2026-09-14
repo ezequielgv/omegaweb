@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-11T23:31:00Z",
+  "title": "Design System: Kinetic Obsidian",
+  "extensions": {
+    "colorMeta": {
+      "primary-container": {
+        "role": "primary",
+        "displayName": "Ember",
+        "canonical": "#ff5722",
+        "purpose": "Fills acting states only: WhatsApp CTAs, live pulse dots, selected category pill, ::selection.",
+        "tonalRamp": ["#3b0900", "#541200", "#862200", "#a03600", "#ff5722", "#ffb5a0", "#ffdbd1", "#ffdbcf"]
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "Ember Salmon",
+        "canonical": "#ffb5a0",
+        "purpose": "Icon glyphs on dark tiles, active nav link, hover text, focus ring, hero gradient stops.",
+        "tonalRamp": ["#3b0900", "#541200", "#862200", "#a03600", "#ffb5a0", "#ffdbd1", "#ffdbcf", "#ffd9cb"]
+      },
+      "tertiary": {
+        "role": "tertiary",
+        "displayName": "Electric Cyan",
+        "canonical": "#7bd0ff",
+        "purpose": "Telemetry and status voice: sync endpoints, secondary status lines, Profesionales accent.",
+        "tonalRamp": ["#001e2c", "#002d40", "#00354a", "#004c69", "#009bd1", "#7bd0ff", "#c4e7ff", "#d6eeff"]
+      },
+      "secondary": {
+        "role": "secondary",
+        "displayName": "Ember Deep",
+        "canonical": "#a03600",
+        "purpose": "Hover register of the ember CTA fill; ambient glow in Gastronomia.",
+        "tonalRamp": ["#380d00", "#5b1b00", "#802900", "#a03600", "#ffb59a", "#ffc4af", "#ffdbcf", "#ffd9b0"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Obsidian Ground",
+        "canonical": "#111318",
+        "purpose": "Page canvas, theme-color; the charcoal ladder below carries structure.",
+        "tonalRamp": ["#0c0e12", "#111318", "#1a1c20", "#1e2024", "#282a2e", "#333539", "#37393e", "#3f4146"]
+      },
+      "on-surface": {
+        "role": "neutral",
+        "displayName": "Cool Bone",
+        "canonical": "#e2e2e8",
+        "purpose": "Titles and proof lines.",
+        "tonalRamp": ["#e2e2e8", "#cfd0d6", "#bcbec4", "#a9abb2", "#9699a0", "#83868e", "#70747c", "#5d6169"]
+      },
+      "on-surface-variant": {
+        "role": "neutral",
+        "displayName": "Warm Muted Bone",
+        "canonical": "#e4beb4",
+        "purpose": "Supporting narrative and muted metadata.",
+        "tonalRamp": ["#e4beb4", "#d1aca3", "#bd9a92", "#a98881", "#957670", "#81655f", "#6e544f", "#5a433f"]
+      },
+      "outline-variant": {
+        "role": "neutral",
+        "displayName": "Hairline Umber",
+        "canonical": "#5b4039",
+        "purpose": "The 2px dashed flow connectors in the Automatizar pipeline.",
+        "tonalRamp": ["#2b1612", "#3a241e", "#48302a", "#5b4039", "#6e554e", "#816a63", "#948078", "#a7958d"]
+      }
+    },
+    "typographyMeta": {
+      "display-hero": { "displayName": "Display Hero", "purpose": "The one hero claim, 56px/36px mobile; watermark step numbers reuse its 800 weight." },
+      "headline-lg": { "displayName": "Headline LG", "purpose": "Section claims; 26px mobile variant." },
+      "headline-sm": { "displayName": "Headline SM", "purpose": "CTA labels, card and capability titles, nav identity." },
+      "body-lg": { "displayName": "Body LG", "purpose": "Section intros and the hero supporting line." },
+      "body-sm": { "displayName": "Body SM", "purpose": "Capability descriptions and card support copy." },
+      "code-sm": { "displayName": "Mono Data", "purpose": "Every dashboard dataline, price, status, endpoint; the system voice." },
+      "label-caps": { "displayName": "Caps Label", "purpose": "Eyebrow pills and badges; always uppercase, +0.08em tracking." }
+    },
+    "shadows": [
+      { "name": "ember-glow-24", "value": "0 0 24px rgba(255,87,34,0.35)", "purpose": "Hero WhatsApp CTA." },
+      { "name": "ember-glow-16", "value": "0 0 16px rgba(255,87,34,0.3)", "purpose": "Section CTAs (0.35 for the nav CTA)." },
+      { "name": "ember-glow-28", "value": "0 0 28px rgba(255,87,34,0.4)", "purpose": "Final CTA." },
+      { "name": "ember-dot-glow", "value": "0 0 8px rgba(255,87,34,0.7)", "purpose": "Eyebrow live pulse dot." },
+      { "name": "card-rest", "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)", "purpose": "Cards and capability rows at rest (tailwind shadow-sm)." },
+      { "name": "panel-raised", "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)", "purpose": "Sector panels and final CTA panel (shadow-xl)." },
+      { "name": "mockup-deep", "value": "0 25px 50px -12px rgb(0 0 0 / 0.25)", "purpose": "Operative mockups: POS frame, booking drawer, KDS board, phone menu (shadow-2xl)." },
+      { "name": "data-well", "value": "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)", "purpose": "The recessed readout wells (shadow-inner)." }
+    ],
+    "motion": [
+      { "name": "card-hover", "value": "transition-all duration-300", "purpose": "Cards lift one charcoal step and fade in the 1px ember top hairline on hover." },
+      { "name": "cta-press", "value": "transition-all + active:scale-[0.98]", "purpose": "All CTAs compress 2% on press." },
+      { "name": "nav-fade", "value": "transition-colors", "purpose": "Nav anchors and footer links tint, never move." },
+      { "name": "live-pulse", "value": "animate-pulse / animate-ping", "purpose": "Only on live/status dots; disabled under prefers-reduced-motion (style.css guard)." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "WhatsApp CTA",
+      "kind": "button",
+      "refersTo": "button-whatsapp",
+      "description": "The ember fill, spent on the act of acting; rioplatense imperative label, prefilled WhatsApp link.",
+      "html": "<a class=\"ds-btn-whatsapp\" href=\"https://wa.me/5492213642317?text=Hola%20Ezequiel%2C%20quiero%20mejorar%20mi%20negocio\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 3h16c1.1 0 2 .9 2 2v11c0 1.1-.9 2-2 2H8l-5 4V5c0-1.1.9-2 2-2z\"/></svg><span>Quiero mejorar mi negocio</span></a>",
+      "css": ".ds-btn-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #ff5722; color: #541200; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 18px; font-weight: 600; line-height: 26px; padding: 16px 32px; border-radius: 12px; box-shadow: 0 0 24px rgba(255,87,34,0.35); text-decoration: none; transition: all 0.15s ease; } .ds-btn-whatsapp:hover { background: #a03600; color: #ffc4af; } .ds-btn-whatsapp:active { transform: scale(0.98); } .ds-btn-whatsapp:focus-visible { outline: 2px solid #ffb5a0; outline-offset: 2px; border-radius: 4px; }"
+    },
+    {
+      "name": "Secondary Sector CTA",
+      "kind": "button",
+      "refersTo": "button-sector",
+      "description": "The ghost-glass alternative; anchor jump to a sector, tinting primary on hover.",
+      "html": "<a class=\"ds-btn-sector\" href=\"#comercios\"><span>Ver soluciones por sector</span><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M11 4h2v12l5-5 1.4 1.4L12 19l-7.4-6.6L6 11l5 5V4z\"/></svg></a>",
+      "css": ".ds-btn-sector { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgba(40,42,46,0.9); color: #e2e2e8; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 18px; font-weight: 600; line-height: 26px; padding: 16px 28px; border-radius: 12px; text-decoration: none; transition: all 0.15s ease; } .ds-btn-sector:hover { background: #37393e; color: #ffb5a0; } .ds-btn-sector:active { transform: scale(0.98); } .ds-btn-sector:focus-visible { outline: 2px solid #ffb5a0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Nav WhatsApp CTA",
+      "kind": "button",
+      "refersTo": "button-whatsapp-nav",
+      "description": "The compact ember CTA inside the fixed glass header.",
+      "html": "<a class=\"ds-btn-wa-nav\" href=\"https://wa.me/5492213642317\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 3h16c1.1 0 2 .9 2 2v11c0 1.1-.9 2-2 2H8l-5 4V5c0-1.1.9-2 2-2z\"/></svg><span>Hablar por WhatsApp</span></a>",
+      "css": ".ds-btn-wa-nav { display: inline-flex; align-items: center; gap: 8px; background: #ff5722; color: #541200; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 18px; font-weight: 600; line-height: 26px; padding: 10px 20px; border-radius: 8px; box-shadow: 0 0 16px rgba(255,87,34,0.35); text-decoration: none; transition: all 0.15s ease; } .ds-btn-wa-nav:hover { background: #a03600; color: #ffc4af; } .ds-btn-wa-nav:active { transform: scale(0.98); }"
+    },
+    {
+      "name": "DemoTag",
+      "kind": "chip",
+      "refersTo": "chip-demo",
+      "description": "Every synthetic figure wears one; the data is always labelled, never impersonated.",
+      "html": "<span class=\"ds-chips-demo\" title=\"Dato ilustrativo (demo)\"><span class=\"ds-dot\"></span>demo</span>",
+      "css": ".ds-chips-demo { display: inline-flex; align-items: center; gap: 6px; font-family: 'JetBrains Mono', monospace; font-size: 10px; line-height: 1; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(228,190,180,0.8); background: rgba(51,53,57,0.6); border: 1px solid #333539; padding: 4px 6px; border-radius: 4px; } .ds-dot { width: 4px; height: 4px; border-radius: 9999px; background: #ab8980; }"
+    },
+    {
+      "name": "Dashboard Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "The proof language: resting charcoal card lifting one step, revealing the 1px ember hairline on hover.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-title\">Vender online</div><p class=\"ds-card-copy\">Ecommerce a medida, catálogos interactivos y cobros automáticos sin comisiones ocultas.</p></article>",
+      "css": ".ds-card { position: relative; overflow: hidden; background: #1a1c20; border-radius: 16px; padding: 24px; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); transition: all 0.3s ease; } .ds-card::before { content: \"\"; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(255,87,34,0.4), transparent); opacity: 0; transition: opacity 0.3s ease; } .ds-card:hover { background: #1e2024; } .ds-card:hover::before { opacity: 1; } .ds-card-title { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #e2e2e8; margin-bottom: 8px; } .ds-card-copy { font-family: Inter, system-ui, sans-serif; font-size: 13px; line-height: 20px; letter-spacing: 0.005em; color: #e4beb4; }"
+    },
+    {
+      "name": "Data Well Readout",
+      "kind": "card",
+      "refersTo": "data-panel",
+      "description": "The recessed well every numeric proof sits in: mono datalines over surface-container-lowest.",
+      "html": "<div class=\"ds-well\"><div class=\"ds-line\"><span>Mes actual</span><span class=\"ds-pos\">+34%</span></div><div class=\"ds-figure\">$1.450.000</div><div class=\"ds-pulse\"><span class=\"ds-live\"></span>Nueva orden #1842 pagada</div></div>",
+      "css": ".ds-well { background: #0c0e12; border-radius: 12px; padding: 14px; box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05); display: flex; flex-direction: column; gap: 8px; font-family: 'JetBrains Mono', monospace; } .ds-line { display: flex; justify-content: space-between; font-size: 12px; color: #e4beb4; } .ds-pos { color: #34d399; font-weight: 700; } .ds-figure { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #e2e2e8; letter-spacing: -0.01em; } .ds-pulse { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #ffb5a0; background: rgba(255,87,34,0.1); padding: 4px 8px; border-radius: 4px; } .ds-live { width: 6px; height: 6px; border-radius: 9999px; background: #ff5722; box-shadow: 0 0 8px rgba(255,87,34,0.7); animation: ds-pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; } @keyframes ds-pulse { 50% { opacity: 0.5; } }"
+    },
+    {
+      "name": "Eyebrow Pill",
+      "kind": "chip",
+      "refersTo": "chip-eyebrow",
+      "description": "The caps-label section marker; role-tinted text, never describing, always naming the audience.",
+      "html": "<div class=\"ds-eyebrow\"><svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2l3 6h6l-4.5 4.5L18 20l-6-3.5L6 20l1.5-7.5L3 8h6l3-6z\"/></svg><span>Para Comercios y Locales Físicos</span></div>",
+      "css": ".ds-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: #282a2e; color: #ffb5a0; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 6px; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Kinetic Obsidian",
+    "overview": "This system exists to make bespoke software legible to the owner of a small or medium Argentine business - a comercio, consultorio, or cocina - in the seconds it takes to scroll one viewport. The owner is shown their own daily grind - stock, caja, turnos, pedidos - running as a finished, working system, and is offered one action: reach Ezequiel on WhatsApp. The page is a proof-of-work, not a promise. It refuses the abstract generic-SaaS hero: the hero shows four live dashboards that look like the owner's own counters and tickets. The aesthetic is obsidian glass over near-black charcoal, punched by an ember that is spent sparingly and always on the act of acting. Everything that states a fact is monospace; everything that narrates a human day is Inter or Plus Jakarta Sans. Depth comes from layering the ten charcoal tones and from glass that blurs chrome without occluding the ground. Precision is structural: the 1px hairline is the load-bearing ornament, and dashboards are synthetic only under an explicit demo label - the world never impersonates real data it does not have.",
+    "keyCharacteristics": [
+      "Near-black charcoal ground with a ten-step tonal surface ramp; ember (#FF5722) spent only on acting states.",
+      "Working-dashboard proof language: every sector carries an operating UI mockup, not an abstract illustration.",
+      "Split-engine type: JetBrains Mono for data and caps labels, Plus Jakarta Sans for display, Inter for narrative.",
+      "Glass chrome (backdrop-blur, ~80% fill) only on fixed chrome, captions, and pills.",
+      "Rioplatense Spanish copy (voseo, pesos argentinos) that speaks the owner's problem, never the stack.",
+      "Every conversion path terminates at WhatsApp wa.me/5492213642317, centrally rerouted through src/lib/links.js."
+    ],
+    "rules": [
+      { "name": "The Ember Fill Rule", "body": "Warm ember #FF5722 fills only the act of acting: primary CTAs, live-pulse dots, the selected category pill, and receding ::selection. Everywhere else the palette stays charcoal, salmon, or cyan. A screen with more than one ember-filled block beyond its CTA is off-system.", "section": "colors" },
+      { "name": "The Hairline Rule", "body": "Structure is drawn with 1px borders in surface-container-highest - never heavier, never brighter. The single sanctioned exception is the 2px dashed outline-variant connector between steps in the Automatizar pipeline.", "section": "colors" },
+      { "name": "The Mono Data Rule", "body": "JetBrains Mono speaks only machine truth: numbers, statuses, labels, endpoints, prices. Human narrative and persuasion (headlines, promises, questions) never render in mono, and data never renders in the display face.", "section": "typography" },
+      { "name": "The Glass-Stays-Thin Rule", "body": "Glass is never doubled and never buoyant: one blurred layer at ~80% fill on fixed chrome, captions, and pills. If a surface casts a real shadow it is not glass - it is a panel, and panels use the charcoal ladder instead.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do sell the owner's day (stock, caja, turnos, pedidos) in rioplatense voseo - never the stack in user-facing copy.",
+      "Do prove with a working dashboard: every sector and the hero itself carries an operating UI, not an illustration.",
+      "Do spend the ember fill only on action, and let the charcoal ladder + hairline carry everything else.",
+      "Do make data speak mono and persuasion speak Inter/Plus Jakarta Sans; keep label-caps uppercase.",
+      "Do label every synthetic figure: a DemoTag on each fabricated panel and the hero footnote 'Datos de los paneles: demo ilustrativo hasta confirmar cifras reales.'",
+      "Do route every conversion through WhatsApp with a prefilled sector message from src/lib/links.js.",
+      "Do keep micro demo sizes (10-11px mono) inside mockup wells only; the shipped body ramp starts at 13px."
+    ],
+    "donts": [
+      "Don't speak English or developer-market language to this audience - no 'full-stack', no 'uptime' as a value claim, no fabricated testimonials or client results.",
+      "Don't present invented figures (revenue, percentages, order numbers, uptime) without the demo marker.",
+      "Don't add cast shadows to glass, double up the blur, or brighten hairlines past surface-container-highest.",
+      "Don't widen borders: structure is 1px, except the sanctioned 2px dashed flow connector.",
+      "Don't add new icon grammars: glyphs are Material Symbols Outlined from Google Fonts.",
+      "Don't invent new surface tones outside the recorded @theme ladder; the neutral story is the ten charcoal steps."
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "surfaces": [
+    {
+      "target": "index.html",
+      "path": ".impeccable/surfaces/landing.md"
+    }
+  ]
+}

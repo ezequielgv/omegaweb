@@ -12,6 +12,7 @@ const { el: sectionEl, visible } = useViewport()
 const slides = [
   {
     id: 'comercios',
+    rubroId: 'comercio',
     tag: 'Para Comercios y Locales Físicos',
     tagIcon: 'storefront',
     accentColor: 'secondary',
@@ -57,6 +58,7 @@ const slides = [
   },
   {
     id: 'profesionales',
+    rubroId: 'profesional',
     tag: 'Para Profesionales y Servicios',
     tagIcon: 'calendar_month',
     accentColor: 'primary',
@@ -97,6 +99,7 @@ const slides = [
   },
   {
     id: 'gastronomia',
+    rubroId: 'gastronomia',
     tag: 'Para Gastronomía y Alimentos',
     tagIcon: 'restaurant',
     accentColor: 'tertiary',
@@ -311,7 +314,7 @@ onBeforeUnmount(() => {
 
                 <button
                   type="button"
-                  @click="openLeadModal(slide.id, slide.defaultGoal)"
+                  @click="openLeadModal(slide.rubroId, slide.defaultGoal)"
                   class="inline-flex items-center justify-center gap-2.5 bg-secondary text-on-secondary font-headline-sm text-headline-sm px-8 py-3.5 rounded-full shadow-[0_4px_14px_rgba(193,120,73,0.25)] hover:bg-secondary-container hover:shadow-[0_6px_20px_rgba(193,120,73,0.35)] cta-glow active:scale-[0.97] transition-all min-h-[48px] cursor-pointer"
                 >
                   <WhatsAppIcon className="w-5 h-5 fill-current" />

@@ -1,6 +1,6 @@
 <script setup>
 import { useViewport } from '../lib/useViewport'
-import { waWith } from '../lib/links'
+import { waWith, EMAIL_CONTACT } from '../lib/links'
 import logoNegro from '../assets/logo_negro.png'
 
 const { el: sectionEl, visible } = useViewport()
@@ -22,15 +22,24 @@ const { el: sectionEl, visible } = useViewport()
         </p>
 
         <div class="flex flex-col items-center gap-4">
-          <a
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-secondary text-on-secondary font-headline-sm text-headline-sm px-8 md:px-10 py-3.5 md:py-4 rounded-xl shadow-[0_4px_14px_rgba(193,120,73,0.25)] hover:bg-secondary-container cta-glow active:scale-[0.98]"
-            :href="waWith('Hola OmegaWeb, quiero hacerles una consulta para mi negocio')"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span class="material-symbols-outlined text-[20px] md:text-[24px]">chat</span>
-            <span>Ponete en contacto ahora</span>
-          </a>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
+            <a
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-secondary text-on-secondary font-headline-sm text-headline-sm px-8 md:px-10 py-3.5 md:py-4 rounded-xl shadow-[0_4px_14px_rgba(193,120,73,0.25)] hover:bg-secondary-container cta-glow active:scale-[0.98]"
+              :href="waWith('Hola OmegaWeb, quiero hacerles una consulta para mi negocio')"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span class="material-symbols-outlined text-[20px] md:text-[24px]">chat</span>
+              <span>Ponete en contacto por WhatsApp</span>
+            </a>
+            <a
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-headline-sm px-6 py-3.5 md:py-4 rounded-xl border border-outline-variant/60 transition-colors"
+              :href="`mailto:${EMAIL_CONTACT}`"
+            >
+              <span class="material-symbols-outlined text-[20px]">mail</span>
+              <span>Escribir por Email</span>
+            </a>
+          </div>
 
           <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 mt-4 md:mt-6 font-headline-sm text-[14px] md:text-[15px] text-on-surface-variant">
             <div class="flex items-center gap-1.5">

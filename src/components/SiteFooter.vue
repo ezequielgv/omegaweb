@@ -1,5 +1,5 @@
 <script setup>
-import { WA_BASE } from '../lib/links'
+import { WA_BASE, EMAIL_CONTACT } from '../lib/links'
 import logoNegro from '../assets/logo_negro.png'
 
 const links = [
@@ -33,6 +33,13 @@ const links = [
             :href="link.href"
           >
             {{ link.label }}
+          </a>
+          <a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5 min-h-11 px-2 py-2 rounded-lg"
+            :href="`mailto:${EMAIL_CONTACT}`"
+          >
+            <span class="material-symbols-outlined text-[16px]">mail</span>
+            {{ EMAIL_CONTACT }}
           </a>
           <a
             class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors flex items-center gap-1.5 min-h-11 px-2 py-2 rounded-lg"

@@ -1,12 +1,17 @@
 <script setup>
-import { WA_BASE, EMAIL_CONTACT } from '../lib/links'
+import { EMAIL_CONTACT } from '../lib/links'
+import { openLeadModal } from '../lib/modalState'
+import WhatsAppIcon from './WhatsAppIcon.vue'
 import logoNegro from '../assets/logo_negro.png'
 
 const links = [
   { href: '#general', label: 'Inicio' },
+  { href: '#solucion', label: 'Diferencial' },
   { href: '#comercios', label: 'Comercios' },
   { href: '#profesionales', label: 'Profesionales' },
   { href: '#gastronomia', label: 'Gastronomía' },
+  { href: '#proceso', label: 'Cómo trabajamos' },
+  { href: '#faq', label: 'Preguntas' }
 ]
 </script>
 
@@ -17,15 +22,15 @@ const links = [
         <div class="flex flex-col gap-2">
           <div class="flex items-center justify-center md:justify-start gap-3">
             <img :src="logoNegro" alt="OmegaWeb" class="h-7 w-auto object-contain" />
-            <span class="font-label-sm text-label-sm text-primary bg-primary/10 px-2.5 py-0.5 rounded-full">
-              Agencia de Desarrollo
+            <span class="font-label-sm text-label-sm text-primary bg-primary/10 px-2.5 py-0.5 rounded-full font-bold">
+              Desarrollo a Medida
             </span>
           </div>
           <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
-            Desarrollamos software a medida para cómo trabaja tu negocio. Sin intermediarios, sin complicaciones.
+            Desarrollamos software y soluciones a la medida de cómo opera tu negocio. Sin enlatados, sin intermediarios.
           </p>
         </div>
-        <div class="flex flex-wrap justify-center md:justify-start gap-6 md:gap-8">
+        <div class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6">
           <a
             v-for="link in links"
             :key="link.href"
@@ -41,15 +46,14 @@ const links = [
             <span class="material-symbols-outlined text-[16px]">mail</span>
             {{ EMAIL_CONTACT }}
           </a>
-          <a
-            class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors flex items-center gap-1.5 min-h-11 px-2 py-2 rounded-lg"
-            :href="WA_BASE"
-            rel="noopener noreferrer"
-            target="_blank"
+          <button
+            type="button"
+            @click="openLeadModal('', '')"
+            class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors flex items-center gap-1.5 min-h-11 px-2 py-2 rounded-lg cursor-pointer font-bold"
           >
-            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <WhatsAppIcon className="w-4 h-4 fill-secondary" />
             WhatsApp Directo
-          </a>
+          </button>
         </div>
       </div>
       <div class="pt-6 md:pt-8 md:pb-5 flex flex-col sm:flex-row items-center justify-between gap-4">

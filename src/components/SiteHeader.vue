@@ -1,35 +1,45 @@
 <script setup>
-	import { onBeforeUnmount, onMounted, ref } from 'vue'
-	import { WA_BASE } from '../lib/links'
-	import logoNegro from '../assets/logo_negro.png'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { openLeadModal } from '../lib/modalState'
+import WhatsAppIcon from './WhatsAppIcon.vue'
+import logoNegro from '../assets/logo_negro.png'
 
-	const links = [
-		{ href: '#general', label: 'Inicio' },
-		{ href: '#comercios', label: 'Comercios' },
-		{ href: '#profesionales', label: 'Profesionales' },
-		{ href: '#gastronomia', label: 'Gastronomía' },
-	]
+const links = [
+  { href: '#general', label: 'Inicio' },
+  { href: '#solucion', label: 'Diferencial' },
+  { href: '#comercios', label: 'Sectores' },
+  { href: '#proceso', label: 'Cómo trabajamos' },
+  { href: '#faq', label: 'Preguntas' }
+]
 
-	const activeHash = ref('#general')
-	const mobileMenuOpen = ref(false)
+const activeHash = ref('#general')
+const mobileMenuOpen = ref(false)
 
-	function readHash() {
-		const h = window.location.hash || '#general'
-		activeHash.value = links.some((l) => l.href === h) ? h : '#general'
-	}
+function readHash() {
+  const h = window.location.hash || '#general'
+  activeHash.value = links.some((l) => l.href === h) ? h : '#general'
+}
 
-	function onHashChange() { readHash() }
+function onHashChange() {
+  readHash()
+}
 
-	function toggleMobileMenu() { mobileMenuOpen.value = !mobileMenuOpen.value }
+function toggleMobileMenu() {
+  mobileMenuOpen.value = !mobileMenuOpen.value
+}
 
-	function closeMobileMenu() { mobileMenuOpen.value = false }
+function closeMobileMenu() {
+  mobileMenuOpen.value = false
+}
 
-	onMounted(() => {
-		readHash()
-		window.addEventListener('hashchange', onHashChange)
-	})
+onMounted(() => {
+  readHash()
+  window.addEventListener('hashchange', onHashChange)
+})
 
-	onBeforeUnmount(() => { window.removeEventListener('hashchange', onHashChange) })
+onBeforeUnmount(() => {
+  window.removeEventListener('hashchange', onHashChange)
+})
 </script>
 
 <template>
@@ -40,14 +50,14 @@
     <div class="h-[64px] md:h-[72px] max-w-6xl mx-auto px-4 md:px-6 lg:px-12 flex items-center justify-between">
       <div class="flex items-center gap-2 md:gap-1">
         <a href="#general" class="flex items-center">
-          <img :src="logoNegro" alt="OmegaWeb" class="h-15 md:h-15 w-auto object-contain" />
+          <img :src="logoNegro" alt="OmegaWeb" class="h-12 md:h-14 w-auto object-contain" />
         </a>
-        <span class="hidden sm:inline-flex font-label-sm py-1">
+        <span class="hidden sm:inline-flex font-label-sm py-1 font-bold text-on-surface">
           | OmegaWeb
         </span>
       </div>
 
-      <nav class="hidden md:flex items-center gap-2" aria-label="Secciones">
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2" aria-label="Secciones">
         <a
           v-for="link in links"
           :key="link.href"
@@ -64,18 +74,17 @@
       </nav>
 
       <div class="flex items-center gap-2 md:gap-4">
-        <a
-          class="inline-flex items-center gap-1.5 md:gap-2 bg-secondary text-on-secondary font-headline-sm text-headline-sm px-3 md:px-5 min-h-11 py-2 md:py-2.5 rounded-xl shadow-[0_4px_14px_rgba(193,120,73,0.25)] hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-[0.98]"
-          :href="WA_BASE"
-          rel="noopener noreferrer"
-          target="_blank"
+        <button
+          type="button"
+          @click="openLeadModal('', '')"
+          class="inline-flex items-center gap-1.5 md:gap-2 bg-secondary text-on-secondary font-headline-sm text-headline-sm px-3.5 md:px-5 min-h-11 py-2 md:py-2.5 rounded-xl shadow-[0_4px_14px_rgba(193,120,73,0.25)] hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-[0.98] cursor-pointer"
         >
-          <span class="material-symbols-outlined text-[18px] md:text-[20px]">chat</span>
+          <WhatsAppIcon className="w-4 h-4 md:w-5 md:h-5 fill-current" />
           <span class="hidden sm:inline">Hablar por WhatsApp</span>
-        </a>
+        </button>
 
         <button
-          class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-surface-container-low transition-colors"
+          class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer"
           @click="toggleMobileMenu"
           :aria-expanded="mobileMenuOpen"
           aria-label="Menú de navegación"

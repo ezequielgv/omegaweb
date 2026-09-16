@@ -12,9 +12,9 @@ const capabilities = [
     text: 'Tus clientes eligen día y hora por su cuenta sin interrumpirte mientras atendés o descansás.'
   },
   {
-    icon: 'mark_chat_read',
-    title: 'Recordatorios automáticos por WhatsApp',
-    text: 'Reducí las inasistencias hasta en un 80% con confirmaciones enviadas automáticamente.'
+    icon: 'mark_email_read',
+    title: 'Confirmaciones y recordatorios por email',
+    text: 'Avisos automáticos de confirmación y recordatorio previo al turno directo a la bandeja de entrada.'
   },
   {
     icon: 'folder_shared',

@@ -39,13 +39,14 @@ const links = [
           >
             {{ link.label }}
           </a>
-          <a
-            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5 min-h-11 px-2 py-2 rounded-lg"
-            :href="`mailto:${EMAIL_CONTACT}`"
+          <button
+            type="button"
+            @click="openLeadModal('', '', 'email')"
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5 min-h-11 px-2 py-2 rounded-lg cursor-pointer"
           >
             <span class="material-symbols-outlined text-[16px]">mail</span>
             {{ EMAIL_CONTACT }}
-          </a>
+          </button>
           <button
             type="button"
             @click="openLeadModal('', '')"

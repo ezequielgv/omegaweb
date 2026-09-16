@@ -68,3 +68,36 @@ export function buildWhatsAppMessage(rubroId, goalId) {
 
   return 'Hola! Me gustaría contarles cómo trabaja mi negocio actualmente y ver cómo podemos mejorarlo con un sistema a medida.'
 }
+
+const rubroSubjectNames = {
+  comercio: 'Comercio / Local',
+  profesional: 'Profesional / Servicios',
+  gastronomia: 'Gastronomía y Alimentos',
+  otro: 'Negocio'
+}
+
+const goalSubjectNames = {
+  ventas: 'Ventas y cobros',
+  gestion: 'Gestión interna',
+  whatsapp: 'Atención WhatsApp',
+  turnos: 'Turnos y agenda',
+  stock: 'Stock y reposición',
+  otro: 'Desarrollo a medida'
+}
+
+export function buildEmailSubject(rubroId, goalId) {
+  const rubro = rubroSubjectNames[rubroId]
+  const goal = goalSubjectNames[goalId]
+
+  if (rubro && goal) {
+    return `Consulta OmegaWeb · ${rubro} (${goal})`
+  }
+  if (rubro) {
+    return `Consulta OmegaWeb · ${rubro}`
+  }
+  if (goal) {
+    return `Consulta OmegaWeb · ${goal}`
+  }
+  return 'Consulta por desarrollo de software a medida · OmegaWeb'
+}
+

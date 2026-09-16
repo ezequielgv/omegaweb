@@ -33,13 +33,14 @@ const { el: sectionEl, visible } = useViewport()
               <WhatsAppIcon className="w-5 h-5 md:w-6 md:h-6 fill-current" />
               <span>Quiero mejorar mi negocio</span>
             </button>
-            <a
-              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-headline-sm px-6 py-3.5 md:py-4 rounded-xl border border-outline-variant/60 transition-colors"
-              :href="`mailto:${EMAIL_CONTACT}`"
+            <button
+              type="button"
+              @click="openLeadModal('', '', 'email')"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-headline-sm px-6 py-3.5 md:py-4 rounded-xl border border-outline-variant/60 transition-colors cursor-pointer active:scale-[0.98]"
             >
               <span class="material-symbols-outlined text-[20px]">mail</span>
               <span>Escribir por Email</span>
-            </a>
+            </button>
           </div>
 
           <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 mt-4 md:mt-6 font-headline-sm text-[14px] md:text-[15px] text-on-surface-variant">
